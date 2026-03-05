@@ -99,8 +99,7 @@ BOOL CALLBACK EnumFunc(HWND hwnd, LPARAM lparam)
     GetWindowTextA(hwnd, windowName, sizeof(windowName));
     if (windowName[0])
     {
-        //std::cout << windowName << std::endl;
-        char processName[MAX_PATH]{};
+        char processName[MAX_PATH + 2 + sizeof(QWORD)*2]{};
         sprintf_s(processName, "%s##%lld", windowName, (QWORD)hwnd); //hwnd is unique
         if (ImGui::Button(processName))
         {
@@ -424,4 +423,5 @@ void ClassCompareFrame()
     ImGuiHelper::ProcessPopupMessage();
     ImGui::End();
     Render();
+
 }
