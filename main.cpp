@@ -1,3 +1,5 @@
+//credit to Omar Cornut for ImGui
+
 #include "ClassCompare.h"
 #include "resource.h"
 
