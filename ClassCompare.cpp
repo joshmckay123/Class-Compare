@@ -146,6 +146,7 @@ void ClassCompareFrame()
     GetClientRect(hwnd, &clientRect);
     ImGui::SetNextWindowSize(ImVec2((float)clientRect.right - (float)clientRect.left, (float)clientRect.bottom - (float)clientRect.top));
 
+    //start imgui window
     ImGui::Begin("Class Compare", nullptr, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse);
 
     if (hProcess != INVALID_HANDLE_VALUE) //only show the button if a process is already selected
